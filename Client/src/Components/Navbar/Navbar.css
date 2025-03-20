@@ -1,0 +1,116 @@
+.navbar {
+  height: max(6vh,80px);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  background-color: #066aff;
+}
+
+.navbar > .nav {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  align-items: center;
+  height: 100%;
+}
+.navbar h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.navbar a {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav ul li{
+  list-style: none;
+  
+  cursor: pointer;
+}
+.ri-logout-box-r-line{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(255, 60, 0);
+}
+
+.navbar .nav-responsive {
+  display: none;
+  width: 100vw;
+}
+
+.nav-responsive > .nav-icon {
+  font-size: 23px;
+  cursor: pointer;
+}
+.navbar button {
+  width: 110px;
+  font-weight: 500;
+  font-size: 1.01rem;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar .nav-login {
+  background-color: #b5dfff;
+  border: none;
+  color: #0e265d;
+}
+.navbar .nav-signup {
+  color: white;
+  background-color: #0055ff;
+  border: 1px solid #0055ff;
+}
+
+.navbar .nav-resp-resgister-close {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .navbar > .nav {
+    display: none;
+  }
+  .navbar {
+    height: 100px;
+    z-index: 10;
+  }
+
+  .navbar > .nav-responsive {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .navbar > .nav-responsive .nav-resp-register {
+    position: absolute;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color:#066aff;
+    border-radius: 5px;
+    margin: auto;
+    top: -400%;
+    transition: top 0.4s linear;
+  }
+}

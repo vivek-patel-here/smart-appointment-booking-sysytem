@@ -1,0 +1,42 @@
+@media (max-width:1200px) {
+    
+}
+.category{
+    width: 100%;
+    height: fit-content;
+    background-color: #0055ff;
+}
+
+.category ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding:10px 10px;
+}
+
+.category ul li{
+    color: white;
+    list-style: none;
+    text-align: center;
+}
+.category .nav-active{
+    border-bottom: 1px solid white;
+}
+.category ul li:hover{
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+@media (max-width:800px) {
+    .category{
+        overflow-x: auto;
+
+    }
+    .category ul{
+        width: fit-content;
+        justify-content: flex-start;
+        padding: 0px 20px;
+        gap: 50px;
+    }
+}

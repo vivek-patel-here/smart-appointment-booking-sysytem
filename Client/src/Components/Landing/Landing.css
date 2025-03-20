@@ -1,0 +1,49 @@
+.home-cover {
+  height: 90vh;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  padding-left: 20vh;
+  gap: 15px;
+  border: 1px solid#83cdff;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+.home-cover h1 {
+  font-size: 3.5rem;
+  color: #066aff;
+  line-height: 3rem;
+}
+.home-cover h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.home-cover p {
+  width: 50%;
+  color: #0841c5;
+  font-size: 1.1rem;
+  margin: 10px 0px;
+}
+@media (max-width:750px) {
+  .home-cover{
+    gap: 10px;
+    padding: 0px;
+    border: 1px solid transparent;
+  }
+  .home-cover h1{
+    font-size: 1.9rem;
+    line-height: 1.8rem;
+  }
+  .home-cover h4 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .home-cover p {
+    width: 100%;
+    color: #0841c5;
+    font-size: 1rem;
+  }
+}
