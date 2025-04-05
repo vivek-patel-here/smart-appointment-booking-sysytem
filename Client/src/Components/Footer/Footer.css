@@ -1,0 +1,101 @@
+.footer{
+    height: 350px;
+    width: 100vw;
+    background-color: #0e265d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+.footer .content{
+    height: 250px;
+    color: white;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1.8fr 1.1fr 1.1fr;
+    border-bottom: 1px solid white;
+    
+}
+
+.footer .content .footer-div1{
+display: flex;
+flex-direction: column;
+padding-left: 10px;
+justify-content: center;
+gap: 20px;
+
+
+}
+.footer-div1 h1{
+    font-size: 3rem;
+    color: white;
+}
+.footer-div1 p{
+    color: white;
+}
+.footer-div1 .icon-container{
+    width: 40%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-div1 .footer-icon{
+    font-size: 2rem;
+    color: white;
+}
+
+
+.footer .content .footer-div2{
+display:flex ;
+justify-content: center;
+gap: 10px;
+align-items: center;
+flex-direction: column;
+}
+
+.footer-div2 h1{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer-div2 ul li{
+    list-style: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500
+
+}
+.footer .content .footer-div3{
+    display:flex ;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-div3 h1{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer-div3 ul li{
+    list-style: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500
+
+}
+
+
+.footer .rights{
+    font-weight: 600;
+    color: white;
+
+}

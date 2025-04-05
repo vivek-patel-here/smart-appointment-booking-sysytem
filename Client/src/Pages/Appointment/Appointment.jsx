@@ -4,12 +4,13 @@ import "./Appointment.css";
 import StoreContext from "../../Contexts/Store";
 function Appointment() {
   const navigate = useNavigate();
-  const { shops, isLogin, errMsg ,url ,successMsg} = useContext(StoreContext);
+  const { shops, isLogin, errMsg, url, successMsg } = useContext(StoreContext);
   const shopId = useParams().shopId;
   const desiredShop = shops.filter((shop) => shop.shopId == shopId)[0];
   let now = new Date();
   now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
   now = now.toISOString().slice(0, 16);
+  
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       navigate("/home");
@@ -25,40 +26,45 @@ function Appointment() {
     remark: "",
   });
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const response =await fetch(url+"/book",{
-      method:'POST',
-      headers:{
-        "Content-Type" :"application/json",
-        "token":localStorage.getItem("token")
-      },
-      body:JSON.stringify({
-        shopId,
-        fullname:info.fullname.toString(),
-        mobile:info.mobile.toString(),
-        address:info.address.toString(),
-        appointmentDateTime:info.appointmentDateTime.toString(),
-        remark:info.remark.toString(),
-      })
-    })
+    try {
+      const response = await fetch(url + "/book", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.getItem("token"),
+        },
+        body: JSON.stringify({
+          shopId,
+          shopName:desiredShop.shopName,
+          fullname: info.fullname.toString(),
+          mobile: info.mobile.toString(),
+          address: info.address.toString(),
+          appointmentDateTime: info.appointmentDateTime.toString(),
+          remark: info.remark.toString(),
+        }),
+      });
 
-    const parsedData = await response.json();
-    if(!parsedData.success){
-      return errMsg(parsedData.message);
+      const parsedData = await response.json();
+      if (!parsedData.success) {
+        return errMsg(parsedData.message);
+      }
+      setTimeout(() => {
+        navigate("/book");
+      }, 1000);
+      return successMsg(parsedData.message);
+    } catch (err) {
+      return errMsg("Oops! Unable to Process your request at this moment!");
     }
-    setTimeout(()=>{
-      navigate("/home");
-    },2000)
-    return successMsg(parsedData.message);
-
   };
 
   const handleChange = (event) => {
-    setInfo((prev)=>{
-      return {...prev,[event.target.name]:[event.target.value]}
-    })
+    setInfo((prev) => {
+      return { ...prev, [event.target.name]: [event.target.value] };
+    });
   };
+
   return (
     <div className="appointment">
       <div className="appoint-container">
@@ -125,14 +131,20 @@ function Appointment() {
               required
               max={"3000-01-01T" + desiredShop.closingTime}
               value={info.appointmentDateTime}
-                onChange={handleChange}
+              onChange={handleChange}
             />
           </div>
 
           <div className="form-div">
             <span>Query Remark</span>
-            <textarea type="text" name="remark" className="remark" placeholder="Remark here!  (Optional*)"  value={info.remark}
-                onChange={handleChange}/>
+            <textarea
+              type="text"
+              name="remark"
+              className="remark"
+              placeholder="Remark here!  (Optional*)"
+              value={info.remark}
+              onChange={handleChange}
+            />
           </div>
           <button type="submit" className="form-submit">
             Submit

@@ -1,0 +1,70 @@
+.review {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.post-review {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 47px;
+  border-bottom: 3px solid white;
+}
+
+.review-input {
+  height: 100px;
+  width: 500px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgb(0, 110, 255);
+  outline: none;
+}
+
+.review-input::-webkit-scrollbar {
+  appearance: none;
+  display: none;
+}
+
+.post-review button {
+  height: 35px;
+  width: 100px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(0, 132, 255);
+}
+
+.review-container {
+  height: 90vh;
+  width: 100%;
+  display: grid;
+  overflow-y: auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.review-box {
+  height: 100px;
+  width: 250px;
+  place-self: center;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}

@@ -21,7 +21,7 @@ const LoginLogic = async(req,res)=>{
 
     let token = jwt.sign(payload,process.env.JWTSECRET);
 
-    return res.status(200).json({success:true,message:"User Login Successful",token});
+    return res.status(200).json({success:true,message:"User Login Successful",token,user:user.username});
 }
 
 module.exports={LoginLogic}

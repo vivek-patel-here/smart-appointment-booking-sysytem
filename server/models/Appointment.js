@@ -2,12 +2,16 @@ const mongoose =require("mongoose");
 
 const appointmentSchema =new mongoose.Schema({
     shopId:{
-        type:[mongoose.Schema.Types.ObjectId,"Please provide a valid shopId"],
+        type:mongoose.Schema.Types.ObjectId,
         required:[true,"ShopId not provided"]
     },
     userId:{
-        type:[mongoose.Schema.Types.ObjectId,"Please provide a valid userId"],
+        type:mongoose.Schema.Types.ObjectId,
         required:[true,"Client Id not provided!"]
+    },
+    shopName:{
+        type:String,
+        required:[true,"ShopName is missing"]
     },
     fullname:{
         type:String,
@@ -25,7 +29,16 @@ const appointmentSchema =new mongoose.Schema({
         type:String,
         required:[true,"Please provide a valid date and Time "]
     },
-    remark:String
+    remark:String,
+    status :{
+        type:String,
+        default:"Pending"
+        ,enum:{values:["Pending","Granted","Cancelled By Shop","Cancelled By Customer","Rescheduled"],message:`Given Value is not supported`}
+    },
+    notactive:{
+        type:Boolean,
+        default:false
+    }
 });
 
 

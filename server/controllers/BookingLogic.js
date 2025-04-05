@@ -2,9 +2,10 @@ const { Appointment } = require("../models/Appointment.js");
 
 const BookingLogic = async(req, res) => {
     let { id } = req.user;
-    let { shopId, fullname, mobile, address, appointmentDateTime, remark } =
+    let { shopId, fullname, mobile, address, appointmentDateTime, remark ,shopName} =
       req.body;
     const newAppointment = new Appointment({
+      shopName:shopName,
       shopId: shopId,
       userId: id,
       fullname,
@@ -20,5 +21,6 @@ const BookingLogic = async(req, res) => {
     }
     return res.status(200).json({success:true,message:"Appointment Booked SuccessfullY!"});
   }
+
 
 module.exports={BookingLogic};

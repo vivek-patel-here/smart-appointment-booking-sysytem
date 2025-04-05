@@ -4,7 +4,7 @@ import "./Navbar.css";
 import StoreContext from "../../Contexts/Store";
 
 function Navbar({setPopup,setPage}) {
-  let {isLogin,setIsLogin,setCategory} = useContext(StoreContext);
+  let {isLogin,setIsLogin,setCategory,setBooking} = useContext(StoreContext);
   let [boxstyle, setBoxStyle] = useState({
     top: "-400%",
   });
@@ -16,7 +16,10 @@ function Navbar({setPopup,setPage}) {
   }
   const Logout =()=>{
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setIsLogin(false);
+    setCategory("All");
+    setBooking([]);
   }
   return (
     <div className="navbar">
@@ -25,7 +28,7 @@ function Navbar({setPopup,setPage}) {
         <ul>
           {isLogin && <Link to="/home">Home</Link>}
           {isLogin && <Link to="/book">Bookings</Link>}
-          {isLogin && <li onClick={()=>{Logout();setCategory("All")}}><i className="ri-logout-box-r-line"></i></li>}
+          {isLogin && <li onClick={Logout}><i className="ri-logout-box-r-line"></i></li>}
           {!isLogin && (
             <button className="nav-login" onClick={()=>{setPopup(true);setPage('Login')}}>
               Login

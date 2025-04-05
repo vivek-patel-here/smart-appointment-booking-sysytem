@@ -1,0 +1,21 @@
+.appointment {
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.appointment .row-bold p{
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.appointment .row {
+  width: 80%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+  margin-bottom: 20px;
+}

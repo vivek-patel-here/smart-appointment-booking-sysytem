@@ -20,6 +20,16 @@
   gap: 20px;
 }
 
+.login form #Login-password-div{
+  width: 310px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  border: 1px solid #066aff;
+}
+
 .login form h1 {
   font-size: 4rem;
   color: #0055ff;
@@ -59,3 +69,9 @@
     cursor: pointer;
     font-size: 1.2rem;
 }
+
+.login form #login-password{
+  width: 275px;
+  border:none;
+}
+

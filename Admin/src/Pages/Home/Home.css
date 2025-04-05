@@ -1,0 +1,13 @@
+.shop-home{
+    height: 90vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.shop-home .sidebar{
+    border-right: 1px solid blue;
+    
+}
+.shop-home .main-content{
+    overflow: hidden;
+}

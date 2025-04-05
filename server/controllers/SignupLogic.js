@@ -26,7 +26,7 @@ const SignupLogic =async(req,res)=>{
 
     let token = jwt.sign(payload,process.env.JWTSECRET);
 
-    return res.status(200).json({success:true,message:"User Reistered Successfully",token});
+    return res.status(200).json({success:true,message:"User Reistered Successfully",token,user:registeredUser.username});
 }
 
 module.exports={SignupLogic};

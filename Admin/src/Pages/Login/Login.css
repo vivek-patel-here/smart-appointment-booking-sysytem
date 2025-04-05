@@ -1,0 +1,42 @@
+.shop-login{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr;
+    width: 100vw;
+    position: absolute;
+}
+.shop-login .left{
+    background-color: blue;
+    display: grid;
+    place-items: center;
+}
+
+.shop-login .left h1,.shop-login .left p{
+    color: white;
+}
+.shop-login .right
+{
+    display:grid;
+    place-items: center;
+    background-color: #fff;
+}
+
+.shop-login .right form{
+    height: 500px;
+    border-radius: 20px;
+    width: 330px;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    gap: 20px;
+  }
+
+  .shop-login .right .toggle{
+    color: blue;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+  }

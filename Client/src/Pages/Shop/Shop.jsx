@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import "./Shop.css"
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import StoreContext from '../../Contexts/Store';
+import Review from '../../Components/Review/Review.jsx';
 function Shop() {
     const shopId = useParams().shopId;
     const navigate =useNavigate();
@@ -10,7 +11,7 @@ function Shop() {
         if(shop.shopId==shopId) return shop;
     })[0];
     useEffect(()=>{
-        if(!isLogin){
+        if(!localStorage.getItem("token")){
             navigate("/");
             errMsg("You are not logged-In!")
         }    },[isLogin])
@@ -22,7 +23,7 @@ function Shop() {
         <div className='shop-page-content'>
             <div className='shop-page-time'>
             <h1 className='shop-page-title'>{desiredShop.shopName}</h1>
-            <h3>{desiredShop.rating} <i class="ri-star-s-fill"></i></h3>
+            <h3>{desiredShop.rating} <i className="ri-star-s-fill"></i></h3>
             </div>
             <p>{desiredShop.description}</p>
             <p>{desiredShop.category}</p>
@@ -37,6 +38,7 @@ function Shop() {
             }}>Book appointment
             </button>
         </div>
+        <Review shopId={shopId}/>
     </div>
   )
 }

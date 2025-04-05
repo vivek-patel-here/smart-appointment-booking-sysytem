@@ -29,7 +29,7 @@ function Shopcard({ shop }) {
           {Number.parseInt(shop.openingTime) <= Number.parseInt(time) &&
           Number.parseInt(time) <= Number.parseInt(shop.closingTime)
             ? "Open"
-            : "close"} now
+            : "Close"} now
         </li>
         <button className="shop-booking-btn" onClick={()=>{navigate(`/shop/${shop.shopId}`)}}>Explore <i className="ri-arrow-right-s-fill"></i></button>
       </div>

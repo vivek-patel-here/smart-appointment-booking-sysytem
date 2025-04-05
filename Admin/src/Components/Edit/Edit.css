@@ -1,0 +1,78 @@
+.edit{
+    height: 100%;
+    width: 100%;
+    padding: 10px 0px 0px 100px;
+}
+.edit #shop-imag{
+    display: none;
+}
+
+.edit form{
+    height: 80vh;
+    width: 60vw;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.edit form select{
+    height: 30px;
+    width: 200px;
+}
+
+.edit form input{
+    padding-left: 10px;
+    height: 30px;
+    width: 230px;
+}
+
+.shop-image-label{
+    cursor: pointer;
+    height: 100px;
+    overflow: hidden;
+    width: 100px;
+}
+
+.edit .shop-image-label img{
+    height: 100px;
+    width: 100px;
+}
+
+.edit input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.edit .row{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.edit .element{
+    display: flex;
+    flex-direction: column;
+}
+.edit span{
+    overflow: hidden;
+}
+
+.edit .btn-edit{
+    padding-left: 10px;
+    width: 240px;
+    height: 30px;
+    background-color: rgb(0, 102, 255);
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.edit .btn-span{
+    color: white;
+}

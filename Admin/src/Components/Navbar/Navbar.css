@@ -1,0 +1,29 @@
+.navbar {
+  height: max(6vh,80px);
+  width: 100%;
+  border-bottom: 1px solid blue;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.navbar > .nav {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  align-items: center;
+  height: 100%;
+}
+.navbar h1{
+  font-size: 2rem;
+  color: #066aff;
+  font-weight: 800;
+  cursor: pointer;
+}
+.nav a{
+  text-decoration: none;
+}
+
+
+
+

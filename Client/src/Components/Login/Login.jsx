@@ -9,6 +9,8 @@ function Login({ setPopup,page,setPage }) {
     password: "",
   });
 
+  const [visibilty,setVisibility] =useState(false);
+
   const PerformLogin =async()=>{
     const reqBody ={
       email:credential.email.toString(),
@@ -27,6 +29,7 @@ function Login({ setPopup,page,setPage }) {
       return errMsg(parsedResponse.message);
     }
     localStorage.setItem("token",parsedResponse.token);
+    localStorage.setItem("user",parsedResponse.user);
     setIsLogin(true);
     return successMsg(parsedResponse.message);
   }
@@ -50,6 +53,7 @@ function Login({ setPopup,page,setPage }) {
       return errMsg(parsedResponse.message);
     }
     localStorage.setItem("token",parsedResponse.token);
+    localStorage.setItem("user",parsedResponse.user);
     setIsLogin(true);
     return successMsg(parsedResponse.message);
   }
@@ -67,6 +71,7 @@ function Login({ setPopup,page,setPage }) {
           return {...prev , [event.target.name]:[event.target.value]};
       })
   }
+
   return (
     <div className="login">
       <form onSubmit={handleSubmit}>
@@ -98,14 +103,17 @@ function Login({ setPopup,page,setPage }) {
           value={credential.email}
         />
 
-        <input
-          type="password"
+        <div id="Login-password-div"><input
+          type={visibilty?"text":"password"}
           name="password"
+          id="login-password"
           placeholder="Enter your Password"
           onChange={handleChange}
           required
           value={credential.password}
-        />
+        /> {visibilty && <i className="ri-eye-line" onClick={()=>setVisibility(false)}></i>}
+        {!visibilty && <i className="ri-eye-off-line" onClick={()=>setVisibility(true)}></i>}
+         </div>
 
         {page == "Signup" && <button>Sign Up</button>}
         {page == "Login" && <button>Log In</button>}
