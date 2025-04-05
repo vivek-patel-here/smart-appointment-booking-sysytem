@@ -13,9 +13,9 @@ function Footer() {
             repellendus, pariatur, ipsam sequi consequuntur .
           </p>
           <div className="icon-container">
-            <i class="ri-facebook-circle-fill footer-icon"></i>
-            <i class="ri-twitter-x-fill footer-icon"></i>
-            <i class="ri-linkedin-box-fill footer-icon"></i>
+            <i className="ri-facebook-circle-fill footer-icon"></i>
+            <i className="ri-twitter-x-fill footer-icon"></i>
+            <i className="ri-linkedin-box-fill footer-icon"></i>
           </div>
         </div>
         <div className="footer-div2">

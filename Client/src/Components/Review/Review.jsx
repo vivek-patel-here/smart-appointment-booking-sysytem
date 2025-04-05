@@ -1,11 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import storeContext from "../../Contexts/Store.jsx";
 import "./Review.css";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 function Review({ shopId }) {
+  const [reviews, setReviews] = useState([]);
   const [review, setReview] = useState("");
   const { url, errMsg } = useContext(storeContext);
-  const [reviews, setReviews] = useState([]);
+  const [rating, setRating] = useState(3);
 
   const handleChange = (event) => {
     setReview(event.target.value);
@@ -13,7 +16,7 @@ function Review({ shopId }) {
 
   const postReview = async () => {
     const newReview = {
-      rating: 3,
+      rating,
       review: review.toString(),
       shopId,
     };
@@ -31,6 +34,7 @@ function Review({ shopId }) {
       if (parsedResponse.success == false) {
         return errMsg(parsedResponse.message);
       }
+      fetchReview();
     } catch (err) {
       return errMsg(
         "Unable to post your review at this moment! Try Again later"
@@ -41,16 +45,6 @@ function Review({ shopId }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     postReview();
-    const newReview = {
-      reviewId: "1x",
-      review,
-      rating: 3,
-      from: "You",
-      shopId: { shopId },
-    };
-    setReviews((prev) => {
-      return [...prev, newReview];
-    });
     setReview("");
   };
 
@@ -92,6 +86,9 @@ function Review({ shopId }) {
           value={review}
           onChange={handleChange}
         ></textarea>
+
+        <Rating isRequired  value={rating} onChange={setRating} style={{ maxWidth: 250 }} />
+
         <button>Post</button>
       </form>
       <h1>Reviews!</h1>

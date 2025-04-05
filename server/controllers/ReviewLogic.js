@@ -6,7 +6,7 @@ const reviewFetchLogic =async(req,res)=>{
     if(!reviews){
         return res.status(500).json({success:false,message:"Internal Database Error!"}); 
     }
-    return res.status(200).json({success:true,reviews});
+    return res.status(200).json({success:true,message:"Reviews fetched successfully!",reviews});
 }
 
 const reviewPostLogic =async (req, res) => {

@@ -7,9 +7,11 @@ function Shop() {
     const shopId = useParams().shopId;
     const navigate =useNavigate();
     const {shops,isLogin,errMsg} = useContext(StoreContext);
+    
     const desiredShop = shops.filter((shop)=>{
         if(shop.shopId==shopId) return shop;
     })[0];
+
     useEffect(()=>{
         if(!localStorage.getItem("token")){
             navigate("/");
