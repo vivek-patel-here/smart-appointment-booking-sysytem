@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 const StoreContext = createContext();
 
 function StoreProvider({ children }) {
-  const url = "http://localhost:5000";
+  const url = "https://smart-appointment-booking-sysytem.onrender.com";
 
   const [auth, setAuth] = useState(false);
   //Error toast message
