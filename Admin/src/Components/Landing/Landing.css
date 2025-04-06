@@ -32,10 +32,15 @@
 /* ***************if registered ************ */
 .card{
     width: 85%;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card-inner::-webkit-scrollbar{
+  appearance: none;
+  display: none;
 }
 .card .card-inner img{
     width: 99%;
@@ -48,6 +53,7 @@
     padding: 0px 0px 5px 5px;
     border-radius: 20px;
     width: 350px;
+    height: 100%;
 }
 
 .card-row{
