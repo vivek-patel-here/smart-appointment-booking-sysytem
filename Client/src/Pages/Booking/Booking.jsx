@@ -58,7 +58,7 @@ function Booking() {
     <div className="booking">
       <div className="booking-content">
         <h1>Track Your Appointments</h1>
-        {booking.length == 0 && <p className="Nobooking">Not Orders Yet !</p>}
+        {booking.length == 0 && <p className="Nobooking">No Appointments Yet !</p>}
         {booking.length != 0 && (
           <ul>
             <li className="book-item book-head">
