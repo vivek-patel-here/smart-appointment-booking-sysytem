@@ -16,7 +16,7 @@ function Landing() {
           in just a few clicks.
           </p>
           <div className="btn-grp">
-          <a href="http://localhost:5174/home" target="_blank"><button>Provide Service</button></a>
+          <a href="https://smart-appointment-booking-system-service.onrender.com/home" target="_blank"><button>Provide Service</button></a>
           <button>Learn More <i className="ri-arrow-right-up-long-line landing-icon"></i></button>
           </div>
         </div>
