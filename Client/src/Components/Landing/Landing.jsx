@@ -1,13 +1,28 @@
-import React from 'react'
-import "./Landing.css"
+import React from "react";
+import "./Landing.css";
 function Landing() {
   return (
-    <div className="home-cover">
-        <h1>India's Biggest Smart</h1> <h1>Appointment Booking </h1><h1>System</h1>
-        <h4>Effortless Appointments, Anytime, Anywhere.</h4>
-        <p>SmartBook is an AI-powered appointment booking system that simplifies scheduling for businesses and clients. It offers real-time availability, automated reminders, and a seamless booking experience.</p>
+    <div className="landing">
+      <div className="landing-container">
+        <div className="home-left">
+          <h1>Appointments,</h1>
+          <h1>the Smart </h1>
+          <h1>Way.</h1>
+        </div>
+        <div className="home-right">
+          <p>
+          SmartBook is a modern appointment booking platform designed for ease and efficiency.
+           Whether you're a business or a client, schedule and manage appointments seamlessly
+          in just a few clicks.
+          </p>
+          <div className="btn-grp">
+          <a href="http://localhost:5174/home" target="_blank"><button>Provide Service</button></a>
+          <button>Learn More <i className="ri-arrow-right-up-long-line landing-icon"></i></button>
+          </div>
+        </div>
       </div>
-  )
+    </div>
+  );
 }
 
-export default Landing
+export default Landing;

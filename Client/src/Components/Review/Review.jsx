@@ -4,7 +4,7 @@ import "./Review.css";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 
-function Review({ shopId }) {
+function Review({ shopId ,shopName }) {
   const [reviews, setReviews] = useState([]);
   const [review, setReview] = useState("");
   const { url, errMsg } = useContext(storeContext);
@@ -75,7 +75,10 @@ function Review({ shopId }) {
 
   return (
     <div className="review">
-      <h1>Give Your FeedBack!</h1>
+      <div className="review-heading">
+      <span>We hope you enjoyed your experience with <span className="review-purple">{shopName}</span></span>
+      <h1>Would you like to rate and give feedback?</h1>
+      </div>
       <form className="post-review" onSubmit={handleSubmit}>
         <textarea
           type="text"
@@ -86,23 +89,20 @@ function Review({ shopId }) {
           value={review}
           onChange={handleChange}
         ></textarea>
-
-        <Rating isRequired  value={rating} onChange={setRating} style={{ maxWidth: 250 }} />
+      <div className="rate-star"> Rate  <Rating isRequired  value={rating} onChange={setRating} style={{ maxWidth: 100 }} /></div>
 
         <button>Post</button>
       </form>
-      <h1>Reviews!</h1>
+      <h2>What people are saying</h2>
       <div className="review-container">
         {reviews.map((R) => {
           return (
             <div className="review-box" key={R._id}>
-              <p>
-                <span>{R.from}</span>{" "}
-                <span>
-                  {R.rating} <i className="ri-star-s-fill"></i>
-                </span>
-              </p>
-              <p>{R.review}</p>
+              <div className="box-head">
+                <p className="username">{R.from}</p>{" "}
+                <p>{R.rating} <i className="ri-star-s-fill"></i></p>
+              </div>
+              <p className="box-body">{R.review}</p>
             </div>
           );
         })}

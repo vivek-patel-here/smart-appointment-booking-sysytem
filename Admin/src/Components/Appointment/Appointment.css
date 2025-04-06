@@ -1,11 +1,22 @@
 .appointment {
-  height: 100%;
+  height:100%;
   width: 100%;
-  margin-top: 20px;
+  padding:10px;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
+
+.appointment-container{
+  height: 90%;
+  width: 80%;
+}
+
+.appointment-container::-webkit-scrollbar{
+ appearance: none;
+ display: none;
+}
+
 
 .appointment .row-bold p{
     font-weight: 600;
@@ -13,9 +24,31 @@
 }
 
 .appointment .row {
-  width: 80%;
+  width: 98%;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
-  margin-bottom: 20px;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1.5fr 1fr;
+  margin: 10px auto;
+  border: 1px solid black;
+  place-items: center;
+}
+.appointment .status{
+  width: 100px;
+}
+
+.appointment .row-name{
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+@media (max-width:900px){
+  .appointment .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 1px solid black;
+    width: 98%;
+  }
 }

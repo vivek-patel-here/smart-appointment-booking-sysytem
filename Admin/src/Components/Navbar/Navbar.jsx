@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Navbar.css";
 import StoreContext from "../../Contexts/Store";
+import { logo } from "../../assets/assets";
 
 function Navbar() {
 
@@ -15,9 +16,9 @@ function Navbar() {
     <div className="navbar">
       <nav className="nav">
         <a href="/">
-          <h1>Smart Book - Service</h1>
+          <img src={logo} alt="" />
         </a>
-        <p onClick={PerformLogout} style={{cursor:"pointer"}}>Logout</p>
+        <p onClick={PerformLogout} className="logout-btn">Logout</p>
       </nav>
     </div>
   );

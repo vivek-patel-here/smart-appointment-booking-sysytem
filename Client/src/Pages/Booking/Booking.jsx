@@ -57,31 +57,31 @@ function Booking() {
   return (
     <div className="booking">
       <div className="booking-content">
-        <h1>My Appointments!</h1>
+        <h1>Track Your Appointments</h1>
         {booking.length == 0 && <p className="Nobooking">Not Orders Yet !</p>}
         {booking.length != 0 && (
           <ul>
-            <li className="book-item">
-              <p></p> {/*logo*/}
+            <li className="book-item book-head">
+              <p>Appointment Id</p>
+              <p>Time and date</p>
+              <p>Customer details</p>
               <p>Shop</p>
-              <p>Customer Details</p>
               <p>Status</p>
-              <button onClick={fetchBooking}>Track current Status</button>
-
+              <button onClick={fetchBooking} className="track-status">Track current Status</button>
             </li>
             {booking.map((elem) => {
               return (
                 <li key={elem._id} className="book-item">
-                  <i className="ri-calendar-schedule-fill"></i>
-                  <p>
-                   {elem.shopName}
-                  </p>
-                  {/*shop name here*/}
+                  <p>{elem._id}</p>
+                  <p>{elem.appointmentDateTime.substr(11,5)+" "+ elem.appointmentDateTime.substr(0,10)}</p>
                   <div className="book-user">
                     <p>{elem.fullname}</p>
                     <p>Ph.No.:+91 {elem.mobile}</p>
                     <p>Address : {elem.address}</p>
                   </div>
+                  <p>
+                   {elem.shopName}
+                  </p>
                   <p>{elem.status}</p>
                 {!elem.notactive &&  <button onClick={()=>{cancelAppointment(elem._id)}}>Cancel Appointment!</button>}
                 </li>

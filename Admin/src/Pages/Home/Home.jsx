@@ -74,7 +74,6 @@ function Home() {
     }
   }
 
-
   useEffect(()=>{
     fetchShopDetails();
     fetchAppointments();
@@ -85,14 +84,18 @@ function Home() {
   return (
     <div className="shop-home">
       <div className="sidebar">
-        <div>
+        <div className="sidebar-box">
           <Link to="/home">
+          <i className="ri-home-line sidebar-icon"></i>
             <div>Home</div>
           </Link>
+
           <Link to="/appointment">
+          <i className="ri-hourglass-line sidebar-icon"></i>
             <div>Appointment</div>
           </Link>
           <Link to="/edit">
+          <i className="ri-edit-box-line sidebar-icon"></i>
             <div>Edit details</div>
           </Link>
         </div>

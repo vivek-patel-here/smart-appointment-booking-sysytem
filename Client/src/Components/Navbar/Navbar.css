@@ -1,10 +1,10 @@
 .navbar {
-  height: max(6vh,80px);
+  height: max(6vh, 80px);
   width: 100%;
   display: grid;
+ 
   place-items: center;
   z-index: 10;
-  background-color: #066aff;
 }
 
 .navbar > .nav {
@@ -14,9 +14,9 @@
   align-items: center;
   height: 100%;
 }
-.navbar h1 {
-  color: white;
-  font-size: 2rem;
+
+.navbar .nav-logo {
+  height: 30px;
 }
 
 .navbar ul {
@@ -25,92 +25,73 @@
   gap: 30px;
 }
 .navbar a {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: rgb(53, 53, 53);
   text-decoration: none;
   cursor: pointer;
 }
-
-.nav ul li{
-  list-style: none;
-  
-  cursor: pointer;
-}
-.ri-logout-box-r-line{
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: rgb(255, 60, 0);
+.navbar ul a:hover {
+  border-bottom: 1px solid rgb(53, 53, 53);
 }
 
-.navbar .nav-responsive {
-  display: none;
-  width: 100vw;
-}
-
-.nav-responsive > .nav-icon {
-  font-size: 23px;
-  cursor: pointer;
-}
-.navbar button {
-  width: 110px;
+.navbar .nav-logout {
+  color: red;
   font-weight: 500;
-  font-size: 1.01rem;
-  height: 35px;
-  border-radius: 5px;
+  list-style: none;
   cursor: pointer;
 }
 
-.navbar .nav-login {
-  background-color: #b5dfff;
-  border: none;
-  color: #0e265d;
-}
-.navbar .nav-signup {
-  color: white;
-  background-color: #0055ff;
-  border: 1px solid #0055ff;
+.nav p:hover {
+  cursor: pointer;
+  scale: 1.01;
 }
 
-.navbar .nav-resp-resgister-close {
+.nav .nav-menu-response {
+  display: none;
+}
+
+.navbar .nav-links-responsive {
   position: absolute;
-  top: 10%;
-  right: 10%;
-  font-size: 1.5rem;
-  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  height: 50vh;
+  top: 0;
+  background-color: #ffffff80;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  z-index: 100;
+  width: 100%;
+  transition: top 0.3s ease-in-out;
 }
+
+.navbar #nav-responsive-active {
+  display: none;
+}
+
+.nav-links-responsive .nav-responsive-close {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+}
+
 
 @media (max-width: 800px) {
-  .navbar > .nav {
+  .nav .nav-links {
     display: none;
   }
-  .navbar {
-    height: 100px;
-    z-index: 10;
+  .nav .nav-logout {
+    display: none;
   }
-
-  .navbar > .nav-responsive {
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    width: 100%;
-    align-items: center;
-    height: 100%;
-    z-index: 10;
+  .nav .nav-menu-response {
+    display: block;
   }
-
-  .navbar > .nav-responsive .nav-resp-register {
-    position: absolute;
-    height: 100px;
-    width: 100vw;
+  #nav-responsive-active:checked + .nav-links-responsive {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background-color:#066aff;
-    border-radius: 5px;
-    margin: auto;
-    top: -400%;
-    transition: top 0.4s linear;
   }
 }

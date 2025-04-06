@@ -1,17 +1,49 @@
 .login {
   height: 100vh;
   width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login .login-left{
+  height: 100%;
+  width: 50%;
+  background-color:  white;
   display: grid;
   place-items: center;
-  position: absolute;
-  background-color: #000000f1;
+}
+
+.login .left-inner{
+  width: 70%;
+}
+
+.login .left-inner img{
+  width: 200px;
+}
+
+.login .left-inner p{
+  text-align: center;
+  width: 90%;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.login .login-right{
+  height: 100%;
+  width: 50%;
+  display: grid;
+  background-color:rgb(117,50,255);
+  place-items: center;
 }
 
 .login form {
   height: 500px;
   border-radius: 20px;
   width: 330px;
-  background-color: #fff;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -27,12 +59,11 @@
   align-items: center;
   justify-content: space-around;
   border-radius: 10px;
-  border: 1px solid #066aff;
 }
 
 .login form h1 {
   font-size: 4rem;
-  color: #0055ff;
+  color: white;
   font-weight: 500;
 }
 
@@ -42,24 +73,27 @@
   padding-left: 10px;
   border-radius: 10px;
   outline: none;
-  border: 1px solid #066aff;
+  border: none
 }
 
 .login button {
   width: 100px;
   height: 30px;
-  outline: none;
-  border: 1px solid #0055ff;
   border-radius: 20px;
-  color: white;
-  background-color: #0055ff;
+  color: rgb(117,50,255);
+  border: none;
+  outline: none;
+  font-size: 1.01rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: white;
 }
 
 .login span{
     cursor: pointer;
-    color: #1e8bff;
     font-size: 1.2rem;
     text-decoration: underline;
+    font-weight: 600;
 }
 
 .login .ri-close-large-line{
@@ -67,6 +101,7 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+    color: white;
     font-size: 1.2rem;
 }
 
@@ -75,3 +110,17 @@
   border:none;
 }
 
+.login .right-lower{
+  color: white;
+}
+
+@media (max-width:700px) {
+  .login .login-left{
+    display: none;
+  }
+
+  .login .login-right{
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -4,6 +4,7 @@ import StoreContext from "../../Contexts/Store";
 import Category from "../../Components/Category/Category";
 import Landing from "../../Components/Landing/Landing";
 import Listing from "../../Components/Listing/Listing";
+import BottomInfo from "../../Components/Bottominfo/BottomInfo";
 
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
       <Landing />
       {isLogin && <Category />}
       <Listing/>
+      <BottomInfo/>
     </div>
   );
 }

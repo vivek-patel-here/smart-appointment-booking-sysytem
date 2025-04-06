@@ -78,6 +78,7 @@ function Edit({ fetchShopDetails, shop }) {
 
   return (
     <div className="edit">
+      <h1>Edit your Details</h1>
       <form onSubmit={handleSubmit}>
         <div className="element">
           <span>Upload Image</span>

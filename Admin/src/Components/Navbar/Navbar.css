@@ -1,7 +1,7 @@
 .navbar {
   height: max(6vh,80px);
   width: 100%;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.582);
   display: grid;
   place-items: center;
   z-index: 10;
@@ -14,14 +14,17 @@
   align-items: center;
   height: 100%;
 }
-.navbar h1{
-  font-size: 2rem;
-  color: #066aff;
-  font-weight: 800;
-  cursor: pointer;
+.navbar img{
+  height: 30px;
 }
 .nav a{
   text-decoration: none;
+}
+
+.navbar  .logout-btn{
+  color: red;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 

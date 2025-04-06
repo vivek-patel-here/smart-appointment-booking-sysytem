@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useState } from "react";
-import { randomImg } from "../assets/assets";
 import { toast } from "react-toastify";
 const StoreContext = createContext();
 

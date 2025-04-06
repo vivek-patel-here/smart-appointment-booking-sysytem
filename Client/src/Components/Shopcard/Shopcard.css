@@ -3,21 +3,28 @@
     width: 300px;
     margin: 10px auto;
     display: flex;
+    background-color: #ffffff48;
+    backdrop-filter: blur(15px);
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    border-radius: 0px 0px 10px 10px;
+}
+.shop-card p{
+    text-transform: capitalize;
 }
 
 .shop-img-container{
     position: relative;
     margin: 10px 0px;
     display: flex;
+    border-radius:20px 0px 20px 0px;
     height: 230px;
     width: 290px;
 }
 .gredient{
     position: absolute;
-    background: linear-gradient(0deg, #0055ff96 0%, rgba(255, 255, 255, 0.068) 100%);
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.897) 0%, rgba(255, 255, 255, 0.068) 30%);
     height: 100%;
     z-index: 5;
     width: 100%;
@@ -39,6 +46,8 @@
 .shop-content{
     width: 280px;
     position: relative;
+    padding:  0px 10px;
+    border-radius: 20px 0px ;
     flex: 1;
 }
 .shop-categ{
@@ -46,7 +55,7 @@
 }
 .shop-desc{
     margin: 10px 0px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
@@ -66,12 +75,13 @@
     bottom: 10%;
     right: 2%;
     padding: 8px 5px;
-    background-color: #1e8bff;
+    background-color:rgb(117,50,255);
     color: white;
     font-weight: 500;
     outline: none;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 .ri-arrow-right-s-fill{
     color: white;

@@ -1,49 +1,89 @@
-.home-cover {
+.landing {
   height: 90vh;
-  margin: 20px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-image: url("bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.landing .landing-container {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing .home-left {
+  width: 45%;
+  height: 80%;
   display: flex;
   justify-content: center;
-  padding-left: 20vh;
-  gap: 15px;
-  border: 1px solid#83cdff;
-  border-radius: 20px;
   flex-direction: column;
 }
 
-.home-cover h1 {
+.landing .home-left h1 {
   font-size: 3.5rem;
-  color: #066aff;
-  line-height: 3rem;
-}
-.home-cover h4 {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.home-cover p {
-  width: 50%;
-  color: #0841c5;
-  font-size: 1.1rem;
-  margin: 10px 0px;
+.landing .home-right {
+  width: 45%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
 }
-@media (max-width:750px) {
-  .home-cover{
-    gap: 10px;
-    padding: 0px;
-    border: 1px solid transparent;
+
+.landing .btn-grp {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.landing .btn-grp button {
+  width: 150px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background-color: transparent;
+}
+
+.landing .btn-grp a button{
+  color: white;
+  background-color: rgb(117,50,255);
+}
+
+@media (max-width:1000px) {
+  .landing .home-left h1{
+   font-size:2.5rem ;
   }
-  .home-cover h1{
-    font-size: 1.9rem;
-    line-height: 1.8rem;
+}
+
+@media (max-width:800px) {
+  .landing{
+    height: 70vh;
   }
-  .home-cover h4 {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
-  .home-cover p {
+  .landing .home-left{
     width: 100%;
-    color: #0841c5;
-    font-size: 1rem;
+
+  }
+  .landing .home-right p{
+    font-size: 1.1rem;
+  }
+  .landing .home-right{
+    width: 100%;
+  }
+  .landing .landing-container {
+    flex-direction: column;
   }
 }
+
+

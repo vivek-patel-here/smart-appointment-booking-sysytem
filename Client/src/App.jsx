@@ -42,7 +42,7 @@ function App() {
   return (
     <>
       {!isLogin && popup && <Login setPopup={setPopup} page={page} setPage={setPage} />}
-      <div className="app">
+     { !popup && <> <div className="app">
         <Navbar setPopup={setPopup} page={page} setPage={setPage}/>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
@@ -61,7 +61,7 @@ function App() {
           draggable
           pauseOnHover
           theme="light"
-        />
+        /></>}
     </>
   );
 }

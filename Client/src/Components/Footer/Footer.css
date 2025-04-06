@@ -1,22 +1,25 @@
 .footer{
-    height: 350px;
+    height: 400px;
     width: 100vw;
-    background-color: #0e265d;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color: white;
+}
+
+.footer .footer-logo{
+    height: 40px;
+    width: 180px;
 }
 
 .footer .content{
-    height: 250px;
-    color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.185);
+    height: 100%;
     width: 80vw;
     display: grid;
-    grid-template-columns: 1.8fr 1.1fr 1.1fr;
-    border-bottom: 1px solid white;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.158);
     
 }
 
@@ -29,12 +32,19 @@ gap: 20px;
 
 
 }
-.footer-div1 h1{
-    font-size: 3rem;
-    color: white;
+.footer h1{
+    font-size: 1.5rem;
+    color: black;
 }
-.footer-div1 p{
-    color: white;
+.footer p,li,a{
+    color: rgba(0, 0, 0, 0.658);
+    text-decoration: none;
+}
+
+.footer .footer-icon{
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.658);
+
 }
 .footer-div1 .icon-container{
     width: 40%;
@@ -44,12 +54,6 @@ gap: 20px;
     justify-content: space-evenly;
 }
 
-.footer-div1 .footer-icon{
-    font-size: 2rem;
-    color: white;
-}
-
-
 .footer .content .footer-div2{
 display:flex ;
 justify-content: center;
@@ -58,19 +62,16 @@ align-items: center;
 flex-direction: column;
 }
 
-.footer-div2 h1{
-    color: white;
-    font-size: 1.5rem;
-}
 
 .footer-div2 ul li{
     list-style: none;
-    color: white;
+    color: rgba(0, 0, 0, 0.685);
     font-size: 1.1rem;
     cursor: pointer;
     font-weight: 500
 
 }
+
 .footer .content .footer-div3{
     display:flex ;
     justify-content: center;
@@ -78,24 +79,39 @@ flex-direction: column;
     align-items: center;
     flex-direction: column;
 }
-
-.footer-div3 h1{
-    color: white;
-    font-size: 1.5rem;
+.footer .content .footer-div3 ul{
+    display:flex ;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
 }
+
+
 
 .footer-div3 ul li{
     list-style: none;
-    color: white;
+    color: rgba(0, 0, 0, 0.658);
     font-size: 1.1rem;
     cursor: pointer;
     font-weight: 500
 
 }
 
+@media (max-width:900px) {
+    .footer .content .footer-div2{
+        display: none;
+        visibility: hidden;
+    }
+    .footer .content{
+        grid-template-columns: 1.5fr 1.5fr;
+    }
+}
 
-.footer .rights{
-    font-weight: 600;
-    color: white;
-
+@media (max-width:600px) {
+    .footer{
+        height: 80vh;
+    }
+    .footer .content{
+        grid-template-columns: 1fr;
+    }
 }

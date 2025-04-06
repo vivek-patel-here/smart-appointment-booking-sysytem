@@ -18,6 +18,7 @@ function Shop() {
             errMsg("You are not logged-In!")
         }    },[isLogin])
   return (
+    <>
     <div className='shop-page'>
         <div className='shop-page-container'>
             <img src={desiredShop.shopImg} alt="" />
@@ -40,8 +41,9 @@ function Shop() {
             }}>Book appointment
             </button>
         </div>
-        <Review shopId={shopId}/>
     </div>
+    <Review shopId={shopId} shopName={desiredShop.shopName}/>
+    </>
   )
 }
 

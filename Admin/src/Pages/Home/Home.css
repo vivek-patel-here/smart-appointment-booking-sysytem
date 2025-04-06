@@ -1,13 +1,55 @@
-.shop-home{
-    height: 90vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+.shop-home {
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
-.shop-home .sidebar{
-    border-right: 1px solid blue;
-    
+.shop-home .sidebar {
+  border-right: 1px solid rgba(0, 0, 0, 0.445);
+  display: flex;
+  justify-content: end;
+  padding-top: 10vh;
 }
-.shop-home .main-content{
-    overflow: hidden;
+
+.shop-home .sidebar .sidebar-box {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.sidebar a {
+  text-decoration: none;
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid rgba(0, 0, 0, 0.425);
+  align-items: center;
+  border-right: none;
+}
+
+.sidebar .sidebar-icon{
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.sidebar a div{
+    width: 100px;
+    color: rgba(0, 0, 0, 0.603);
+
+  
+}
+.shop-home .main-content {
+  background-image: url("/bg1.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+@media (max-width:800px) {
+    .sidebar a div{
+        display: none;
+    }
 }

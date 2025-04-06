@@ -92,8 +92,8 @@ function Login() {
     <div className="shop-login">
       <div className="left">
         <div>
-          <h1>Smart Book</h1>
-          <p>Effortless Appointments, Anytime, Anywhere.</p>
+          <h1>SmartBook Services</h1>
+          <p>Appointments , the smart way</p>
         </div>
       </div>
       <div className="right">

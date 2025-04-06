@@ -1,25 +1,28 @@
 import React from "react";
+import { logo } from "../../assets/assets";
 import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className="footer" id="footer">
       <div className="content">
+
+
         <div className="footer-div1">
-          <h1>Smart Book</h1>
+          <img className="footer-logo" src={logo} alt="SmartBook" />
           <p>
-            Hello-This is vivek . Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Nulla magnam unde placeat. Ea sunt velit nihil
-            repellendus, pariatur, ipsam sequi consequuntur .
+            Developed with love by Vivek. <br /> Explore more of my projects on GitHub
+           <br /> and stay connected via LinkedIn. <br />Thanks for stopping by!
           </p>
-          <div className="icon-container">
-            <i className="ri-facebook-circle-fill footer-icon"></i>
-            <i className="ri-twitter-x-fill footer-icon"></i>
-            <i className="ri-linkedin-box-fill footer-icon"></i>
-          </div>
+          <p>
+          &copy;2025 | vivek | SmartBook.com
+          <br />
+          <span>All Rights Reserved</span>
+          </p>
         </div>
+
         <div className="footer-div2">
-          <h1>COMPANY</h1>
+        <h1>COMPANY</h1>
           <ul>
             <li>Home</li>
             <li>About</li>
@@ -27,17 +30,19 @@ function Footer() {
             <li>Privacy Policy</li>
           </ul>
         </div>
+
         <div className="footer-div3">
           <h1>GET IN TOUCH</h1>
           <ul>
-            <li>+91-45646-46549</li>
-            <li>Contact@SmartBook.com</li>
+            <li><a href="https://www.linkedin.com/in/vivek-patel2004/"><i className="ri-linkedin-fill footer-icon"></i></a> LinkedIn </li>
+            <li><a href="https://github.com/vivek-patel-here"><i className="ri-github-fill footer-icon"></i></a> GitHub </li>
+            <li><i className="ri-mail-line footer-icon"></i> vivek.patel.1057@gmail.com</li>
+            <li><i className="ri-phone-line footer-icon"></i>+91-8595818416</li>
           </ul>
         </div>
+
+        
       </div>
-      <p className="rights">
-        Copyright 2025 &copy; SmartBook.com - All Right Reserved.
-      </p>
     </div>
   );
 }

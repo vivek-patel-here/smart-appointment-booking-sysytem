@@ -93,9 +93,8 @@ function Appointment() {
             </div>
 
             <div className="form-div">
-              <span>Mobile Number</span>
+              <span>Mobile Number (+91)</span>
               <div className="form-phone">
-                <span>+91</span>
                 <input
                   type="number"
                   inputMode="numeric"
@@ -150,6 +149,7 @@ function Appointment() {
             Submit
           </button>
         </form>
+
       </div>
     </div>
   );

@@ -1,3 +1,3 @@
 import uploadImage from "./uploadImage.png" 
-
-export {uploadImage};
+import logo from "./logo.png"
+export {uploadImage,logo};

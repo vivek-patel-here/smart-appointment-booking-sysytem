@@ -1,2 +1,3 @@
-import randomImg from "./random.jpg"
-export {randomImg}
+import logo from "./smartbooklogo.png";
+import bgv from "./bgv.mp4";
+export {logo,bgv}

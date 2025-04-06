@@ -13,6 +13,7 @@ function Shopcard({ shop }) {
         <div className="gredient"></div>
         <h5 className="shop-title">{shop.shopName}</h5>
       </div>
+      
       <div className="shop-content">
         <p className="shop-desc">{shop.description}</p>
         <p className="shop-categ">{shop.category}</p>

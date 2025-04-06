@@ -2,11 +2,11 @@
     width: 90vw;
     margin: auto;
     height:fit-content;
-    background-color:#edf7ff;
+      overflow-x: hidden;
+
 }
 @media (max-width:600px) {
     .app{
         width: 100vw;
-        overflow-x: hidden;
     }
 }
