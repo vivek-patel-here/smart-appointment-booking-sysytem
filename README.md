@@ -2,8 +2,8 @@
 
 SmartBook is a full-stack appointment booking platform built with the **MERN stack** (MongoDB, Express, React, Node.js). It allows service providers to register their businesses and manage appointments, while customers can browse listings and book appointments through a user-friendly interface.
 
-**Client-Panel [https://smart-appointment-booking-system-client-ke7j.onrender.com]**
-**Service-Provider-Panel [https://smart-appointment-booking-system-service.onrender.com]**
+- *Client-Panel [https://smart-appointment-booking-system-client-ke7j.onrender.com]* <br>
+- *Service-Provider-Panel [https://smart-appointment-booking-system-service.onrender.com]*
 ---
 
 ## Features
